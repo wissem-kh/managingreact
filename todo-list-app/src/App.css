@@ -1,0 +1,40 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+}
+
+.task-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.task-item.completed {
+  background-color: #d3ffd3;
+  text-decoration: line-through;
+}
+
+h3 {
+  cursor: pointer;
+}
