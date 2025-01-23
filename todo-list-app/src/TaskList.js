@@ -1,20 +1,20 @@
-import React from 'react';
-import TaskItem from './TaskItem';
+import React from "react";
+import { useSelector } from "react-redux";
+import Task from "./Task";
 
-function TaskList({ tasks, deleteTask, toggleCompletion, editTask }) {
+const ListTask = () => {
+  const tasks = useSelector((state) => state.tasks);
+
   return (
     <div>
-      {tasks.map((task) => (
-        <TaskItem
-          key={task.id}
-          task={task}
-          deleteTask={deleteTask}
-          toggleCompletion={toggleCompletion}
-          editTask={editTask}
-        />
-      ))}
+      {tasks.length === 0 ? (
+        <p>No tasks available</p>
+      ) : (
+        tasks.map((task) => <Task key={task.id} task={task} />)
+      )}
     </div>
   );
-}
+};
 
-export default TaskList;
+export default ListTask;
+
